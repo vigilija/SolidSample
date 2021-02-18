@@ -6,18 +6,19 @@ namespace ArdalisRating
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ardalis Insurance Rating System Starting...");
+            var Logger = new ConsoleLogger();
+            Logger.Log("Ardalis Insurance Rating System Starting...");
 
             var engine = new RatingEngine();
             engine.Rate();
 
             if (engine.Rating > 0)
             {
-                Console.WriteLine($"Rating: {engine.Rating}");
+                Logger.Log($"Rating: {engine.Rating}");
             }
             else
             {
-                Console.WriteLine("No rating produced.");
+                Logger.Log("No rating produced.");
             }
 
         }
