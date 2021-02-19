@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Xunit;
 
@@ -12,7 +13,7 @@ namespace ArdalisRating.Tests
         {
             var policy = new Policy
             {
-                Type = PolicyType.Land,
+                Type = PolicyType.Land.ToString(),
                 BondAmount = 200000,
                 Valuation = 200000
             };
@@ -31,7 +32,7 @@ namespace ArdalisRating.Tests
         {
             var policy = new Policy
             {
-                Type = PolicyType.Land,
+                Type = PolicyType.Land.ToString(),
                 BondAmount = 200000,
                 Valuation = 260000
             };
